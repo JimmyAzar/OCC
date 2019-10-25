@@ -57,7 +57,7 @@ Domain knowledge was used to add features that look for suspicious behavior in t
    
 <p>Below is a summary of the features used in the KDD'99 dataset. <br><br>
 
-Basic features of each network connection vector <br><br>
+<b>Basic features of each network connection vector </b><br><br>
 
 1. Duration: Length of time duration of the connection <br>
 2. Protocol_type: Protocol used in the connection <br>
@@ -67,9 +67,9 @@ Basic features of each network connection vector <br><br>
 6. Dst_bytes: Number of data bytes transferred from destination to source in single connection <br>
 7. Land: if source and destination IP addresses and port numbers are equal then, this variable takes value 1 else 0 <br>
 8. Wrong_fragment: Total number of wrong fragments in this connection <br>
-9. Urgent: Number of urgent packets in this connection. Urgent packets are packets with the urgent bit activated <br>
+9. Urgent: Number of urgent packets in this connection. Urgent packets are packets with the urgent bit activated <br><br>
 
-Content related features of each network connection vector <br><br>
+	<b>Content related features of each network connection vector</b> <br><br>
 
 10. Hot: Number of "hot" indicators in the content such as: entering a system directory, creating programs and executing programs <br>
 11. Num_failed _logins: Count of failed login attempts <br>
@@ -83,9 +83,9 @@ Content related features of each network connection vector <br><br>
 19. Num_access_files: Number of operations on access control files <br>
 20. Num_outbound_cmds: Number of outbound commands in an ftp session <br>
 21. Is_hot_login: 1 if the login belongs to the "hot" list i.e., root or admin; else 0 <br>
-22. Is_guest_login: 1 if the login is a "guest" login; 0 otherwise <br>
+22. Is_guest_login: 1 if the login is a "guest" login; 0 otherwise <br><br>
 
-Time related traffic features of each network connection vector  <br><br>
+	<b>Time related traffic features of each network connection vector </b><br><br>
 
 23. Count: Number of connections to the same destination host as the current connection in the past two seconds <br>
 24. Srv_count: Number of connections to the same service (port number) as the current connection in the past two seconds <br>
@@ -95,9 +95,9 @@ Time related traffic features of each network connection vector  <br><br>
 28. Srv_rerror_rate: The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in srv_count (24) <br>
 29. Same_srv_rate: The percentage of connections that were to the same service, among the connections aggregated in count (23) <br>
 30. Diff_srv_rate: The percentage of connections that were to different services, among the connections aggregated in count (23) <br>
-31. Srv_diff_host_ rate: The percentage of connections that were to different destination machines among the connections aggregated in srv_count (24) <br>
+31. Srv_diff_host_ rate: The percentage of connections that were to different destination machines among the connections aggregated in srv_count (24) <br><br>
 
-Host based traffic features in a network connection vector <br><br>
+	<b>Host based traffic features in a network connection vector</b> <br><br>
 
 32. Dst_host_count: Number of connections having the same destination host IP address <br>
 33. Dst_host_srv_ count: Number of connections having the same port number <br>
