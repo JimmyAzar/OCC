@@ -4,25 +4,21 @@
 <body>    
 <h1>Network Intrusion Detection System</h1>
 	
-	A network intrusion detection system (IDS) aims at identifying unauthorized users of a computer network and distinguishing between 'normal' connections and  'intrusions' (or attacks). A standard dataset including a wide variety of intrusions simulated in a military network environment, was provided by the DARPA Intrusion Detection Evaluation Program. The data consisted of nine weeks of raw TCP dump data for a local-area network (LAN) simulating a typical U.S. Air Force LAN. The LAN was operated as if it were a true Air Force environment, but peppered it with multiple attacks. The raw training data was about four gigabytes of compressed binary TCP dump data from seven weeks of network traffic. This was processed into about five million connection records.  Similarly, the two weeks of test data yielded around two million connection records. The KDD'99 dataset is a version of this dataset. 
+A network intrusion detection system (IDS) aims at identifying unauthorized users of a computer network and distinguishing between 'normal' connections and  'intrusions' (or attacks). A standard dataset including a wide variety of intrusions simulated in a military network environment, was provided by the DARPA Intrusion Detection Evaluation Program. The data consisted of nine weeks of raw TCP dump data for a local-area network (LAN) simulating a typical U.S. Air Force LAN. The LAN was operated as if it were a true Air Force environment, but peppered it with multiple attacks. The raw training data was about four gigabytes of compressed binary TCP dump data from seven weeks of network traffic. This was processed into about five million connection records.  Similarly, the two weeks of test data yielded around two million connection records. The KDD'99 dataset is a version of this dataset. 
 	
-	A connection is a sequence of TCP packets starting and ending at some well defined times, between which data flows to and from a source IP address to a target IP address under some well defined protocol.  Each connection is labeled as either normal, or as an attack, with exactly one specific attack type. Each connection record consists of about 100 bytes.
+A connection is a sequence of TCP packets starting and ending at some well defined times, between which data flows to and from a source IP address to a target IP address under some well defined protocol.  Each connection is labeled as either normal, or as an attack, with exactly one specific attack type. Each connection record consists of about 100 bytes.
 	
-	Attacks fall into four main categories:
+Attacks fall into four main categories:
 
-    <b>DoS</b>: denial-of-service, e.g. syn flood; DoS depletes the victim's resources thereby making it unable to handle legitimate requests. 
-    Relevant features: "source bytes" and "percentage of packets with errors".
+<b>DoS</b>: denial-of-service, e.g. syn flood; DoS depletes the victim's resources thereby making it unable to handle legitimate requests. Relevant features: "source bytes" and "percentage of packets with errors".
     
-    <b>R2L</b>: remote-to-local, unauthorized access from a remote machine, e.g. guessing password; the attacker intrudes into a remote machine and gains local access of the victim machine. Relevant features: "Duration of connection", "service requested", "number of failed login attempts".
+<b>R2L</b>: remote-to-local, unauthorized access from a remote machine, e.g. guessing password; the attacker intrudes into a remote machine and gains local access of the victim machine. Relevant features: "Duration of connection", "service requested", "number of failed login attempts".
     
-    <b>U2R</b>: user-to-root, unauthorized access to local superuser (root) privileges, e.g., various 'buffer overflow' attacks; 
-    In U2R attacks, an attacker uses a normal account to login into a victim system and tries to gain root/administrator privileges by exploiting some vulnerability in the victim.   
-    Relevant features: "number of file creations" and "number of shell prompts invoked".
+<b>U2R</b>: user-to-root, unauthorized access to local superuser (root) privileges, e.g., various 'buffer overflow' attacks; In U2R attacks, an attacker uses a normal account to login into a victim system and tries to gain root/administrator privileges by exploiting some vulnerability in the victim. Relevant features: "number of file creations" and "number of shell prompts invoked".
     
-    <b>Probing</b>: surveillance and other probing, e.g., port scanning. The objective of probing is to gain information about the remote victim. Relevant features: "duration of connection" and "source bytes".
+<b>Probing</b>: surveillance and other probing, e.g., port scanning. The objective of probing is to gain information about the remote victim. Relevant features: "duration of connection" and "source bytes".
 
-Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. 
-In detecting anomalies and attacks in the network, there are two problems that are addressed: 
+Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. In detecting anomalies and attacks in the network, there are two problems that are addressed: 
 
 1. Binary classification: activity is normal or attack <br> 
 2. Multi-class classification: activity is either 'normal' or 'DoS' or 'Probe' or 'R2L' or 'U2R' <br><br
