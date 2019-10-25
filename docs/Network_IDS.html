@@ -14,8 +14,6 @@ The KDD'99 dataset is a version of this dataset.
 A connection is a sequence of TCP packets starting and ending at some well defined times, between which data flows to and from a source IP address to a target IP address under some well defined protocol.  Each connection is labeled as either normal, or as an attack, with exactly one specific attack type.  
 Each connection record consists of about 100 bytes. 
 
-<br> 
-
 Attacks fall into four main categories: <br>
 
     <bold>DoS</bold>: denial-of-service, e.g. syn flood; DoS depletes the victim's resources thereby making it unable to handle legitimate requests. 
@@ -26,13 +24,11 @@ Attacks fall into four main categories: <br>
     Relevant features: "number of file creations" and "number of shell prompts invoked".
     <bold>Probing</bold>: surveillance and other probing, e.g., port scanning. The objective of probing is to gain information about the remote victim. Relevant features: "duration of connection" and "source bytes".
 
-<br> 
-
-<p>Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. 
-In detecting anomalies and attacks in the network, there are two problems that are addressed: <br> <br> 
+Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. 
+In detecting anomalies and attacks in the network, there are two problems that are addressed: 
 
 1. Binary classification: activity is normal or attack <br> 
-2. Multi-class classification: activity is either 'normal' or 'DoS' or 'Probe' or 'R2L' or 'U2R' <br><br>
+2. Multi-class classification: activity is either 'normal' or 'DoS' or 'Probe' or 'R2L' or 'U2R' <br><br
 
 In the dataset, the dependent variable (target variable) is not defined explicitly. However, the attack variable can be used to define the target variable as required.
 <br><br>
