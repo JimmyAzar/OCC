@@ -18,5 +18,7 @@ A collection of datasets for OCC can be found in the following link: <br>
 <a class="external reference" href="http://odds.cs.stonybrook.edu/">Outlier Detection DataSets (ODDS)</a> <br>
 
 A case study for building a network intrusion detection system for the KDD'99 (DARPA-based) dataset which is one of the few publicly available data sets for network-based anomaly detection systems: <br>
-<a class="external reference" href="https://jimmyazar.github.io/OCC/Network_IDS.html">Network Intrusion Detection System</a> <br>
 
+Description: <a class="external reference" href="https://jimmyazar.github.io/OCC/Network_IDS.html">Network Intrusion Detection Problem</a> <br>
+
+Demo file: <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_network_IDS.html">Network Intrusion Detection System</a> <br>
