@@ -10,10 +10,14 @@ The data consisted of nine weeks of raw TCP dump data for a local-area network (
 The LAN was operated as if it were a true Air Force environment, but peppered it with multiple attacks. 
 The raw training data was about four gigabytes of compressed binary TCP dump data from seven weeks of network traffic.  
 This was processed into about five million connection records.  Similarly, the two weeks of test data yielded around two million connection records.
-The KDD'99 dataset is a version of this dataset.</p>
+The KDD'99 dataset is a version of this dataset.</p> 
 
+<br> <br> 
+    
 <p>A connection is a sequence of TCP packets starting and ending at some well defined times, between which data flows to and from a source IP address to a target IP address under some well defined protocol.  Each connection is labeled as either normal, or as an attack, with exactly one specific attack type.  
 Each connection record consists of about 100 bytes. </p>
+
+<br> <br> 
 
 <p> Attacks fall into four main categories: <br>
 
@@ -26,14 +30,16 @@ Each connection record consists of about 100 bytes. </p>
     <bold>Probing</bold>: surveillance and other probing, e.g., port scanning. The objective of probing is to gain information about the remote victim. Relevant features: "duration of connection" and "source bytes".
     </p>
 
-<p>Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. 
-In detecting anomalies and attacks in the network, there are two problems that are addressed: <br> 
+<br> <br> 
 
-1. Binary classification: activity is normal or attack <br>
-2. Multi-class classification: activity is either 'normal' or 'DoS' or 'Probe' or 'R2L' or 'U2R' <br>
+<p>Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. 
+In detecting anomalies and attacks in the network, there are two problems that are addressed: <br> <br> 
+
+1. Binary classification: activity is normal or attack <br> 
+2. Multi-class classification: activity is either 'normal' or 'DoS' or 'Probe' or 'R2L' or 'U2R' <br><br>
 
 In the dataset, the dependent variable (target variable) is not defined explicitly. However, the attack variable can be used to define the target variable as required.
-<br>
+<br><br>
     
 <bold><underline>Attack types</bold></underline>: 
 
@@ -43,28 +49,31 @@ In the dataset, the dependent variable (target variable) is not defined explicit
 <bold>iU2R</bold>: "buffer_overflow.", "loadmodule.", "rootkit.", "perl.", "sqlattack.", "xterm.", "ps."
 <bold>iR2L</bold>: "guess_passwd.", "ftp_write.", "imap.", "phf.", "multihop.", "warezmaster.", "warezclient.", "spy.", "xlock.", "xsnoop.", "snmpguess.", "snmpgetattack.", "httptunnel.", "sendmail.", "named.", "worm."
 </p>
+    <br><br>
     
-    <h1> Features </h1> 
+<h1> Features </h1> 
 
-<p>The attributes are a mix of binary, nominal, and numeric features. 
+<p>The attributes are a mix of binary, nominal, and numeric features.  <br><br>
 
 The "same host" features examine only the connections in the past two seconds that have the same destination host as the current connection, and calculate statistics related to protocol behavior, service, etc.
-<br>
+<br><br>
 The similar "same service" features examine only the connections in the past two seconds that have the same service as the current connection.
-<br>
+<br><br>
 "Same host" and "same service" features are together called  time-based traffic features of the connection records.
-<br>
+<br><br>
 Some probing attacks scan the hosts (or ports) using a much larger time interval than two seconds, for example once per minute.  Therefore, connection records were also sorted by destination host, and features were constructed using a window of 100 connections to the same host instead of a time window.  This yields a set of so-called host-based traffic features.
-<br>
+<br><br>
 Unlike most of the DOS and probing attacks, there appear to be no sequential patterns that are frequent in records of R2L and U2R attacks. This is because the DOS and probing attacks involve many connections to some host(s) in a very short period of time, but the R2L and U2R attacks are embedded in the data portions
 of packets, and normally involve only a single connection.
-<br>
+<br><br>
 Domain knowledge was used to add features that look for suspicious behavior in the data portions, such as the number of failed login attempts.  These features are called "content" features. 
 </p>
-    
-</p>Below is a summary of the features used in the KDD'99 dataset. 
 
-Basic features of each network connection vector <br>
+<br><br>
+    
+</p>Below is a summary of the features used in the KDD'99 dataset. <br><br>
+
+Basic features of each network connection vector <br><br>
 
 1. Duration: Length of time duration of the connection <br>
 2. Protocol_type: Protocol used in the connection <br>
@@ -76,7 +85,7 @@ Basic features of each network connection vector <br>
 8. Wrong_fragment: Total number of wrong fragments in this connection <br>
 9. Urgent: Number of urgent packets in this connection. Urgent packets are packets with the urgent bit activated <br>
 
-Content related features of each network connection vector <br>
+Content related features of each network connection vector <br><br>
 
 10. Hot: Number of "hot" indicators in the content such as: entering a system directory, creating programs and executing programs <br>
 11. Num_failed _logins: Count of failed login attempts <br>
@@ -92,7 +101,7 @@ Content related features of each network connection vector <br>
 21. Is_hot_login: 1 if the login belongs to the "hot" list i.e., root or admin; else 0 <br>
 22. Is_guest_login: 1 if the login is a "guest" login; 0 otherwise <br>
 
-Time related traffic features of each network connection vector  <br>
+Time related traffic features of each network connection vector  <br><br>
 
 23. Count: Number of connections to the same destination host as the current connection in the past two seconds <br>
 24. Srv_count: Number of connections to the same service (port number) as the current connection in the past two seconds <br>
@@ -104,7 +113,7 @@ Time related traffic features of each network connection vector  <br>
 30. Diff_srv_rate: The percentage of connections that were to different services, among the connections aggregated in count (23) <br>
 31. Srv_diff_host_ rate: The percentage of connections that were to different destination machines among the connections aggregated in srv_count (24) <br>
 
-Host based traffic features in a network connection vector <br>
+Host based traffic features in a network connection vector <br><br>
 
 32. Dst_host_count: Number of connections having the same destination host IP address <br>
 33. Dst_host_srv_ count: Number of connections having the same port number <br>
@@ -118,7 +127,7 @@ Host based traffic features in a network connection vector <br>
 41. Dst_host_srv_r error_rate: The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_srv_c ount (33) <br>
 </p>
 
-Below is an HTML demo file of a network IDS for tackling the KDD'99 dataset <br>
+Below is an HTML demo file of a network IDS for tackling the KDD'99 dataset <br><br>
 
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_networkIDS.html">Network Intrusion Detection System</a> <br>
 
