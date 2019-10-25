@@ -15,16 +15,17 @@
 <b>R2L</b>: remote-to-local, unauthorized access from a remote machine, e.g. guessing password; the attacker intrudes into a remote machine and gains local access of the victim machine. Relevant features: "Duration of connection", "service requested", "number of failed login attempts".
     <br><br>
 <b>U2R</b>: user-to-root, unauthorized access to local superuser (root) privileges, e.g., various 'buffer overflow' attacks; In U2R attacks, an attacker uses a normal account to login into a victim system and tries to gain root/administrator privileges by exploiting some vulnerability in the victim. Relevant features: "number of file creations" and "number of shell prompts invoked".
-    <br><br>
+<br><br>    
 <b>Probing</b>: surveillance and other probing, e.g., port scanning. The objective of probing is to gain information about the remote victim. Relevant features: "duration of connection" and "source bytes".
-	<br><br></p>
-	
-<p>Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. In detecting anomalies and attacks in the network, there are two problems that are addressed: </p>
+</p>
+
+<p>Aim: construct a predictive model (i.e. a classifier) and assess its capability of distinguishing between 'normal' connections and 'intrusions' or attacks. In detecting anomalies and attacks in the network, there are two problems that are addressed: <br><br>
 
 1. Binary classification: activity is normal or attack <br> 
 2. Multi-class classification: activity is either 'normal' or 'DoS' or 'Probe' or 'R2L' or 'U2R' <br><br>
+	</p>
 
-In the dataset, the dependent variable (target variable) is not defined explicitly. However, the attack variable can be used to define the target variable as required.
+<p>In the dataset, the dependent variable (target variable) is not defined explicitly. However, the attack variable can be used to define the target variable as required.
 <br><br>
     
 <bold><underline>Attack types</bold></underline>: 
