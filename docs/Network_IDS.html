@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
 
+	body {
+  margin: 25px;
+  background-color: rgb(240,240,240);
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Applies to all <h1>...</h1> elements. */
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* Applies to all elements with <... class="someclass"> specified. */
+.someclass { color: red; }
+
+/* Applies to the element with <... id="someid"> specified. */
+#someid { color: green; }
+	
+	
 <body>    
 <h1>Network Intrusion Detection System</h1>
 	
@@ -106,7 +127,7 @@ Some probing attacks scan the hosts (or ports) using a much larger time interval
 38. Dst_host_serro r_rate: The percentage of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in dst_host_count (32). <br>
 39. Dst_host_srv_s error_rate: The percent of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in dst_host_srv_count (33). <br>
 40. Dst_host_rerro r_rate: The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_count (32). <br>
-41. Dst_host_srv_r error_rate: The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_srv_c ount (33). <br>
+41. Dst_host_srv_r error_rate: The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_srv_count (33). <br>
 </p>
 
 <p> An HTML demo file of a network IDS for tackling the KDD'99 dataset: <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_network_IDS.html">Network Intrusion Detection System</a> <br>
