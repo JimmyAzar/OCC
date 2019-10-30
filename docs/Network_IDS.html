@@ -43,7 +43,7 @@
 
 <p>The attributes are a mix of binary, nominal, and numeric features.  <br><br>
 
-<! The "same host" features examine only the connections in the past two seconds that have the same destination host as the current connection, and calculate statistics related to protocol behavior, service, etc.
+The "same host" features examine only the connections in the past two seconds that have the same destination host as the current connection, and calculate statistics related to protocol behavior, service, etc.
 <br><br>
 The similar "same service" features examine only the connections in the past two seconds that have the same service as the current connection.
 <br><br>
@@ -51,12 +51,7 @@ The similar "same service" features examine only the connections in the past two
 <br><br>
 Some probing attacks scan the hosts (or ports) using a much larger time interval than two seconds, for example once per minute.  Therefore, connection records were also sorted by destination host, and features were constructed using a window of 100 connections to the same host instead of a time window.  This yields a set of so-called host-based traffic features.
 <br><br>
-Unlike most of the DOS and probing attacks, there appear to be no sequential patterns that are frequent in records of R2L and U2R attacks. This is because the DOS and probing attacks involve many connections to some host(s) in a very short period of time, but the R2L and U2R attacks are embedded in the data portions
-of packets, and normally involve only a single connection.
-<br><br>
-Domain knowledge was used to add features that look for suspicious behavior in the data portions, such as the number of failed login attempts.  These features are called "content" features. 
-</p>
->  
+</p>  
 
 <p>Below is a summary of the features used in the KDD'99 dataset. <br><br>
 
