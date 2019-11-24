@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Gaussian dataset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for gausscirc"><tr><td>gausscirc</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+
+Gaussian dataset
+</h2>
+
+<h3>Description</h3>
+
+
+<p>Generates two circularly symmetric Gaussian distributions in 2D as training set, in addition to a test set consisting of inliers from the same Gaussian distributions as well as outliers from a uniform distribution. Inliers have label = 0 and outliers have label = 1.     
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+gausscirc &lt;- function(ntrn_inlier=100, ntst_inlier=20, ntst_outlier=20, show=TRUE, seed=1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ntrn_inlier</code></td>
+<td>
+
+
+<p>Number of inliers per distribution in the training set.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ntst_inlier</code></td>
+<td>
+
+<p>Number of inliers per distribution in the test set.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ntst_outlier</code></td>
+<td>
+
+<p>Number of outliers in the test set drawn from a uniform distribution.
+</p>
+</td></tr>
+<tr valign="top"><td><code>show</code></td>
+<td>
+
+<p>If TRUE, a scatter plot is generated showing the training/test set. 
+</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+
+<p>A seed value for saving the state of randomness.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+
+
+<p>A list:
+</p>
+<table summary="R valueblock">
+<tr valign="top"><td><code>l[[1]] </code></td>
+<td>
+<p>Training set: a data frame with labels as last column </p>
+</td></tr>
+<tr valign="top"><td><code>l[[2]] </code></td>
+<td>
+<p>Test set: a data frame with labels as last column</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Jimmy Azar
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+l &lt;- gausscirc(ntrn_inlier = 200, ntst_inlier =  100, ntst_outlier = 100, 
+               show = TRUE, seed=1)
+xtrn &lt;- l[[1]]
+xtst &lt;- l[[2]]
+
+</pre>
+
+
+</body></html>
