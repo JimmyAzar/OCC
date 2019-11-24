@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Visualize classifier decision boundary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for viz"><tr><td>viz</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+
+Visualize classifier decision boundary
+</h2>
+
+<h3>Description</h3>
+
+
+<p>Visualizes the decision boundary of a classifier around the target class. A mesh grid of points is set up, and each grid point is classified.     
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+viz &lt;- function(data, resolution = 100, classifier, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+
+
+<p>(2D) training set: a data frame with features as columns. Labels are given in the last column. The labels are dummy labels since the training set should consist only of inliers.  
+</p>
+</td></tr>
+<tr valign="top"><td><code>resolution</code></td>
+<td>
+
+<p>Grid resolution (default: 100 points per axis)
+</p>
+</td></tr>
+<tr valign="top"><td><code>classifier</code></td>
+<td>
+
+<p>Support for current classifiers: gaussocc, parzenocc, knnocc, rknndocc, kmeansocc, somocc, gmmocc. 
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+
+
+<p>Displays a scatter plot of training/test set along with classifier's decision boundary contour.   
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Jimmy Azar
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+l &lt;- boomerang(Ntrn = c(200,200), Ntst = c(100,100),
+               ntst_outlier = 200, s=0.7, show =TRUE, seed=1)
+xtrn &lt;- l[[1]]
+xtst &lt;- l[[2]]
+
+#visualize decision boundary and training set
+viz(data = xtrn, classifier = "parzen", h = 1, fracrej = 0.1, resolution = 100)
+
+#add final test objects (inliers and outliers)
+shape &lt;- c(20,17) #dot, triangle
+points(xtst[,1:2],col="violetred",pch=shape[xtst[,3]+1]) #add test objects
+legend("bottomright",legend = c("training inlier","test inlier","test outlier"), 
+       col = c("blue","violetred","violetred"), pch = c(20,20,17), cex=0.8)
+</pre>
+
+
+</body></html>
