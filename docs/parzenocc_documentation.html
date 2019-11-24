@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Parzen one-class classifier</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for parzenocc"><tr><td>parzenocc</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+
+Parzen one-class classifier
+</h2>
+
+<h3>Description</h3>
+
+
+<p>Builds a data description based on a target class using Parzen density estimation. 
+Test objects can be classified as either inliers (label = 0) or outliers (label = 1).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+parzenocc(xtrn,xtst,h=seq(0.01,10,length.out=50),fracrej=0.05)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>xtrn</code></td>
+<td>
+
+
+<p>Training set: a data frame with features as columns. Labels are given in the last column. The labels are dummy labels since the training set should consist of only inliers.  
+</p>
+</td></tr>
+<tr valign="top"><td><code>xtst</code></td>
+<td>
+
+<p>Test set: a data frame with features as columns. Labels are given in the last column. The test set can consist of a mix of inliers and outliers.
+</p>
+</td></tr>
+<tr valign="top"><td><code>h</code></td>
+<td>
+
+<p>A scalar or a numeric vector specifying the width of the Gaussian kernel for density estimation. 
+</p>
+</td></tr>
+<tr valign="top"><td><code>fracrej</code></td>
+<td>
+
+<p>A scalar specifying the reject fraction to consider as outlier when training. 
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>Ltst </code></td>
+<td>
+<p>Hard labels for test set: inlier = 0, outlier = 1</p>
+</td></tr>
+<tr valign="top"><td><code>Ptst </code></td>
+<td>
+<p>Soft labels for test set: probability of inlier</p>
+</td></tr>
+<tr valign="top"><td><code>h </code></td>
+<td>
+<p>Optimal h selected if a numeric vector was supplied for the parameter</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Jimmy Azar
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+l &lt;- boomerang(Ntrn = c(200,200), Ntst = c(100,100),
+               ntst_outlier = 200, s=0.7, show =TRUE, seed=1)
+xtrn &lt;- l[[1]]
+xtst &lt;- l[[2]]
+
+out &lt;- parzenocc(xtrn, xtst, h=1, fracrej = 0.1)
+pred &lt;- out[[1]]
+</pre>
+
+
+</body></html>
