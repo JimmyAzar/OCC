@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Gaussian mixture model one-class classifier</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for gmmocc"><tr><td>gmmocc</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+
+Gaussian mixture model one-class classifier
+</h2>
+
+<h3>Description</h3>
+
+
+<p>Builds a data description based on a target class using a Gaussian mixture model  density estimation. Test objects can be classified as either inliers (label = 0) or outliers (label = 1).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+gmmocc &lt;- function(xtrn, xtst, k = 6, fracrej = 0.05, seed=1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>xtrn</code></td>
+<td>
+
+
+<p>Training set: a data frame with features as columns. Labels are given in the last column. The labels are dummy labels since the training set should consist of only inliers.  
+</p>
+</td></tr>
+<tr valign="top"><td><code>xtst</code></td>
+<td>
+
+<p>Test set: a data frame with features as columns. Labels are given in the last column. The test set can consist of a mix of inliers and outliers.
+</p>
+</td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+
+<p>A scalar specifying the number of Gaussian components.
+</p>
+</td></tr>
+<tr valign="top"><td><code>fracrej</code></td>
+<td>
+
+<p>A scalar specifying the reject fraction to consider as outlier when training. 
+</p>
+</td></tr>
+<tr valign="top"><td><code>fracrej</code></td>
+<td>
+
+<p>A scalar specifying the reject fraction to consider as outlier when training. 
+</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+
+<p>A seed value for saving the state of randomness.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+
+
+<p>A list:
+</p>
+<table summary="R valueblock">
+<tr valign="top"><td><code>l[[1]] </code></td>
+<td>
+<p>Hard labels for test set: inlier = 0, outlier = 1</p>
+</td></tr>
+<tr valign="top"><td><code>l[[2]] </code></td>
+<td>
+<p>Soft labels for test set: probability of inlier</p>
+</td></tr>
+<tr valign="top"><td><code>l[[3]] </code></td>
+<td>
+<p>Gaussian mixture model object</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Jimmy Azar
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+l &lt;- gausscirc(ntrn_inlier = 200, ntst_inlier =  100, 
+               ntst_outlier = 100, show = TRUE, seed=1)
+xtrn &lt;- l[[1]]
+xtst &lt;- l[[2]]
+
+k &lt;- 6 #number of Gaussian components
+l &lt;- gmmocc(xtrn, xtst,  k = k, fracrej = 0.05, seed = 1)
+L &lt;- l[[1]]
+mod &lt;- l[[3]]
+</pre>
+
+
+</body></html>
