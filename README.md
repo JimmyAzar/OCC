@@ -14,6 +14,18 @@ Below are HTML demo files of some classifiers used for OCC <br>
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_somocc.html">SOM one-class classifier</a> <br>
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_gmmocc.html">Gaussian mixture model one-class classifier</a> <br>
 
+Documentation files for some of the implemented classifiers and artificial datasets can be found here: <br>
+
+<a class="external reference" href="https://jimmyazar.github.io/OCC/gaussocc_documentation.html">Gaussian one-class classifier</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/parzenocc_documentation.html">Parzen one-class classifier</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/knnocc_documentation.html">K-nn one-class classifier</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/kmeansocc_documentation.html">K-means one-class classifier</a> <br> 
+<a class="external reference" href="https://jimmyazar.github.io/OCC/somocc_documentation.html">SOM one-class classifier</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/gmmocc_documentation.html">Gaussian mixture model one-class classifier</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/viz_documentation.html">Boundary visualization</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/gausscirc_documentation.html">Gaussian dataset</a> <br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/boomerang_documentation.html">Boomerang dataset</a> <br>
+
 A collection of datasets for OCC can be found in the following link: <br>
 <a class="external reference" href="http://odds.cs.stonybrook.edu/">Outlier Detection DataSets (ODDS)</a> <br>
 
