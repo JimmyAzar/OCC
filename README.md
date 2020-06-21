@@ -13,7 +13,7 @@ Below are HTML demo files of some classifiers used for OCC; recent work is highl
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_kmeansocc.html">K-means one-class classifier</a> <br> 
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_somocc.html">SOM one-class classifier</a> <br>
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_gmmocc.html">Gaussian mixture model one-class classifier</a> <br>
-<a class="external reference" href="https://jimmyazar.github.io/OCC/demo_rdocc_mocc.html" style="color:red;">RDOCC & MOCC</a><br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/demo_rdocc_mocc.html" style="color:#FF0000;">RDOCC & MOCC</a><br>
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_median_transform.html" style="color:red;">Median transform (preprocessing)</a> <br>
 
 A paper on RDOCC & MOCC (in addition to experiments with isolation forest, SVM, and local outlier factor): 
