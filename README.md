@@ -38,4 +38,4 @@ A case study for building a network intrusion detection system for the KDD'99 (D
 
 Description: <a class="external reference" href="https://jimmyazar.github.io/OCC/Network_IDS.html">Network Intrusion Detection Problem</a> <br>
 Demo file: <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_network_IDS.html">Network Intrusion Detection System (KDD)</a> <br>
-Demo file: <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_NSL_KDD.html">Network Intrusion Detection System using OCC (NSL-KDD)</a> <br>
+Demo file: <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_NSL_KDD.html">Network Intrusion Detection System using OCC (NSL-KDD)*</a> <br>
