@@ -17,7 +17,7 @@ Below are HTML demo files of some classifiers used for OCC; recent work is indic
 <a class="external reference" href="https://jimmyazar.github.io/OCC/demo_median_transform.html">Median transform (preprocessing)*</a> <br>
 
 A paper on RDOCC & MOCC (in addition to experiments with isolation forest, SVM, and local outlier factor): 
-<a class="external reference" href="https://jimmyazar.github.io/OCC/rdocc_mocc.pdf">RDOCC/MOCC*</a><br>
+<a class="external reference" href="https://jimmyazar.github.io/OCC/rdocc_mocc_2.pdf">RDOCC/MOCC*</a><br>
 
 Documentation files for some of the implemented classifiers and artificial datasets can be found here: <br>
 
