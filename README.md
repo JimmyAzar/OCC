@@ -19,21 +19,6 @@ Below are HTML demo files of some classifiers used for OCC; recent work is indic
 A paper on RDOCC & MOCC (in addition to experiments with isolation forest, SVM, and local outlier factor): 
 <a class="external reference" href="https://wz7kfejx.github.io/OCC/rdocc_mocc_2.pdf">RDOCC/MOCC*</a><br>
 
-#Documentation files for some of the implemented classifiers and artificial datasets can be found here: <br>
-
-<!a class="external reference" href="https://wz7kfejx.github.io/OCC/gaussocc_documentation.html">Gaussian one-class classifier</a> <br>
-<!a class="external reference" href="https://wz7kfejx.github.io/OCC/parzenocc_documentation.html">Parzen one-class classifier</a> <br>
-<!a class="external reference" href="https://wz7kfejx.github.io/OCC/knnocc_documentation.html">K-nn one-class classifier</a> <br>
-<!a class="external reference" href="https://wz7kfejx.github.io/OCC/kmeansocc_documentation.html">K-means one-class classifier</a> <br> 
-<!a class="external reference" href="https://wz7kfejx.github.io/OCC/somocc_documentation.html">SOM one-class classifier</a> <br>
-<a class="external reference" href="https://wz7kfejx.github.io/OCC/gmmocc_documentation.html">Gaussian mixture model one-class classifier</a> <br>
-<a class="external reference" href="https://wz7kfejx.github.io/OCC/viz_documentation.html">Boundary visualization</a> <br>
-<a class="external reference" href="https://wz7kfejx.github.io/OCC/gausscirc_documentation.html">Gaussian dataset</a> <br>
-<a class="external reference" href="https://wz7kfejx.github.io/OCC/boomerang_documentation.html">Boomerang dataset</a> <br>
-
-A collection of datasets for OCC can be found in the following link: <br>
-<a class="external reference" href="http://odds.cs.stonybrook.edu/">Outlier Detection DataSets (ODDS)</a> <br>
-
 A case study for building a network intrusion detection system for the KDD'99 (DARPA-based) dataset which is one of the few publicly available data sets for network-based anomaly detection systems: <br>
 
 Description: <a class="external reference" href="https://wz7kfejx.github.io/OCC/Network_IDS.html">Network Intrusion Detection Problem</a> <br>
